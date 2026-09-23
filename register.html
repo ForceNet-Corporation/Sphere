@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Регистрация — Sphere</title>
+  <link rel="icon" href="assets/brand/logo-mark.png" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+  <link rel="stylesheet" href="css/minimal.css" />
+</head>
+<body>
+  <div class="auth-shell">
+    <section class="auth-visual">
+      <img src="assets/brand/bg-1.png" alt="" class="auth-bg" />
+      <a href="register.html" class="brand">
+        <img src="assets/brand/logo-mark.png" alt="Sphere" />
+        Sphere
+      </a>
+      <div class="auth-copy">
+        <h2>Создай свой Sphere</h2>
+        <p>Создай аккаунт и сразу начинай личные переписки.</p>
+        <div class="auth-points">
+          <div class="auth-point">
+            <div class="feature-icon" data-icon="user-plus"></div>
+            Общайся один на один и в группах
+          </div>
+          <div class="auth-point">
+            <div class="feature-icon" data-icon="image-plus"></div>
+            Отправляй сообщения, фото и файлы
+          </div>
+          <div class="auth-point">
+            <div class="feature-icon" data-icon="bookmark-star"></div>
+            Находи пользователей по @юзернейму
+          </div>
+          <div class="auth-point">
+            <div class="feature-icon" data-icon="clock-dashed-half"></div>
+            Получай сообщения в реальном времени
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="auth-panel">
+      <div class="auth-form-wrap">
+        <h1>Создать аккаунт</h1>
+        <p>Создай аккаунт и начни общаться в Sphere.</p>
+
+        <form class="auth-form" data-register-form novalidate>
+          <div class="field">
+            <label for="fullName">Имя и фамилия</label>
+            <div class="field-control">
+              <span data-icon="user"></span>
+              <input id="fullName" type="text" placeholder="Например: Иван Иванов" required />
+            </div>
+          </div>
+          <div class="field">
+            <label for="username">Юзернейм</label>
+            <div class="field-control">
+              <span>@</span>
+              <input id="username" type="text" placeholder="ivan_ivanov" required />
+            </div>
+          </div>
+          <div class="field">
+            <label for="regEmail">Электронная почта</label>
+            <div class="field-control">
+              <span data-icon="envelope"></span>
+              <input id="regEmail" type="email" placeholder="example@mail.ru" required />
+            </div>
+          </div>
+          <div class="auth-row">
+            <div class="field">
+              <label for="regPassword">Пароль</label>
+              <div class="field-control">
+                <span data-icon="lock-keyhole-open"></span>
+                <input id="regPassword" type="password" placeholder="Придумайте пароль" minlength="8" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="birthDate">Дата рождения</label>
+              <div class="field-control">
+                <input id="birthDate" type="date" />
+              </div>
+            </div>
+          </div>
+          <p class="field-error" data-form-error></p>
+          <button type="submit" class="btn btn-primary auth-submit" data-submit-btn>Зарегистрироваться</button>
+        </form>
+
+                <p class="auth-footer-note">Уже есть аккаунт? <a href="login.html">Войти</a></p>
+        <p class="auth-legal">Нажимая «Зарегистрироваться», вы соглашаетесь с <a href="#">Пользовательским соглашением</a> и <a href="#">Политикой конфиденциальности</a>.</p>
+      </div>
+    </section>
+  </div>
+
+  <script type="module" src="js/pages/register.page.js"></script>
+</body>
+</html>
