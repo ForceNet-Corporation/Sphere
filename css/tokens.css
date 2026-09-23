@@ -1,0 +1,32 @@
+:root {
+  --bg-base: #05060c;
+  --bg-canvas: #080a14;
+  --surface-1: #0d101c;
+  --surface-2: #121627;
+  --surface-3: #171c31;
+  --border-soft: rgba(255, 255, 255, 0.07);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --text-primary: #f4f5fb;
+  --text-secondary: #9aa0bc;
+  --text-muted: #5b6180;
+  --accent-500: #6a5cf5;
+  --accent-400: #8478ff;
+  --accent-600: #5548d9;
+  --accent-glow: rgba(106, 92, 245, 0.35);
+  --gradient-brand: linear-gradient(135deg, #4c46e0 0%, #7b3ff2 55%, #9c6bff 100%);
+  --gradient-surface: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+  --success: #34d399;
+  --danger: #f76b6b;
+  --warning: #f5b94d;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-full: 999px;
+  --shadow-card: 0 20px 45px -25px rgba(0, 0, 0, 0.65);
+  --shadow-float: 0 30px 60px -20px rgba(76, 70, 224, 0.35);
+  --font-display: "Sora", "Manrope", sans-serif;
+  --font-body: "Inter", "Manrope", sans-serif;
+  --nav-width: 264px;
+  --rail-width: 320px;
+  --topbar-height: 76px;
+}

@@ -1,0 +1,85 @@
+/* Sphere — minimal visual pass
+   Keeps the existing layout/components but removes decorative gradients,
+   excessive glow, and oversized rounding for a cleaner interface. */
+:root {
+  --bg-base: #0a0a0b;
+  --bg-canvas: #0d0d0f;
+  --surface-1: #121214;
+  --surface-2: #18181b;
+  --surface-3: #202024;
+  --border-soft: rgba(255,255,255,.09);
+  --border-strong: rgba(255,255,255,.16);
+  --text-primary: #f4f4f5;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --accent-500: #e5e5e7;
+  --accent-400: #ffffff;
+  --accent-600: #d4d4d8;
+  --accent-glow: transparent;
+  --gradient-brand: #e5e5e7;
+  --gradient-surface: none;
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --shadow-card: 0 8px 30px rgba(0,0,0,.22);
+  --shadow-float: 0 8px 24px rgba(0,0,0,.18);
+}
+
+body {
+  background: var(--bg-base);
+}
+
+.btn { border-radius: 9px; }
+.btn-primary { background: var(--accent-500); color: #0a0a0b; box-shadow: none; }
+.btn-primary:hover { transform: none; box-shadow: none; background: #fff; }
+.btn-ghost { background: transparent; }
+.btn-ghost:hover { background: var(--surface-2); }
+.btn-outline { border-color: var(--border-strong); }
+.btn-outline:hover { border-color: #fff; color: #fff; }
+.btn-icon { border-radius: 9px; }
+
+.card { border-radius: var(--radius-lg); box-shadow: none; }
+.card::before { display: none; }
+.feature-icon { border-radius: 9px; background: var(--surface-2); color: var(--text-primary); }
+.chip-active { background: var(--surface-3); border-color: var(--border-strong); color: var(--text-primary); }
+
+.app-topbar,
+.nav-bar { background: rgba(10,10,11,.92); backdrop-filter: blur(12px); }
+.side-nav-link.active { background: var(--surface-2); color: var(--text-primary); }
+.side-user { background: var(--surface-1); }
+
+.hero { min-height: 620px; padding-top: 74px; }
+.hero-bg img { opacity: .06; }
+.hero-bg:after { background: linear-gradient(180deg, rgba(10,10,11,.88), #0a0a0b); }
+.hero-orb { display: none; }
+.hero h1 span { background: none; color: var(--text-primary); }
+
+.preview-window { border-radius: 14px; background: #111113; box-shadow: var(--shadow-card); }
+.preview-sidebar { background: #141416; }
+.preview-chat.active { background: var(--surface-2); }
+.bubble { border-radius: 10px; }
+.outgoing .bubble { background: #e5e5e7; color: #0a0a0b; }
+.message-input button { background: #e5e5e7; color: #0a0a0b; }
+
+.about-section { background: var(--bg-base); }
+.about-card { border-radius: 14px; background: var(--surface-1); box-shadow: none; }
+.about-pills span { background: transparent; }
+.feature-card:hover { transform: none; }
+.photo-card { border-radius: 12px; }
+.cta-band { border-radius: 14px; background: var(--surface-1); border: 1px solid var(--border-soft); }
+.cta-band:after { display: none; }
+.cta-band h2 { color: var(--text-primary); }
+.cta-band p { color: var(--text-secondary); }
+.btn-light { background: var(--accent-500); color: #0a0a0b; }
+
+.auth-visual img.auth-bg { opacity: .12; }
+.auth-visual::after { background: #0a0a0b; }
+
+.modal-overlay { background: rgba(0,0,0,.72); backdrop-filter: blur(4px); }
+.modal { border-radius: 14px; box-shadow: var(--shadow-card); }
+.toast { box-shadow: var(--shadow-card); }
+
+@media (max-width: 560px) {
+  .hero { min-height: auto; }
+  .cta-band { border-radius: 12px; }
+}
